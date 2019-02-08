@@ -1,6 +1,9 @@
 #ifndef BNO055_HPP
 #define BNO055_HPP
 
-void test();
+class BNO055
+{
+
+};
 
 #endif // BNO055_HPP

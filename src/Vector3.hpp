@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 template<typename T>
-class Vector3<T>
+class Vector3
 {
 public:
     Vector3(const Vector3<T>& copy) {

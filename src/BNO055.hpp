@@ -188,19 +188,22 @@ public:
     void Begin();
 
     void SetMode(OPMODE mode);
+    OPMODE GetMode() const;
+
+    void SetUnits(uint8_t unitsel);
 
     float GetTemperature() const;
     Vector3<float> GetEuleur() const;
 
 private:
     uint8_t read8(uint8_t reg_addr) const;
-    uint8_t readLen(uint8_t reg_addr, uint8_t* buf, size_t len) const;
+    void readLen(uint8_t reg_addr, uint8_t* buf, size_t len) const;
     Vector3<float> readVec(uint8_t reg_addr) const;
-    uint8_t write8(uint8_t reg_addr, uint8_t value);
+    void write8(uint8_t reg_addr, uint8_t value);
 
 private:
     uint8_t addr;
-    uint8_t mode;
+    OPMODE mode;
 };
 
 #endif // BNO055_HPP
